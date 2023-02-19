@@ -1,0 +1,12 @@
+version: '3'
+services:
+  node-server:    
+    container_name: node-ts-3555
+    env_file:
+      - .env
+    build:
+      context: .
+    ports:
+      - 3555:4000
+    restart: unless-stopped
+    # other services here like API, Database ETC
